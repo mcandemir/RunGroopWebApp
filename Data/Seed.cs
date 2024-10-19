@@ -28,8 +28,8 @@ namespace RunGroopWebApp.Data
                             Address = new Address()
                             {
                                 Street = "123 Main St",
-                                City = "Charlotte",
-                                State = "NC"
+                                City = "Istanbul",
+                                State = "Istanbul"
                             }
                          },
                         new Club()
@@ -41,8 +41,8 @@ namespace RunGroopWebApp.Data
                             Address = new Address()
                             {
                                 Street = "123 Main St",
-                                City = "Charlotte",
-                                State = "NC"
+                                City = "Ankara",
+                                State = "Ankara"
                             }
                         },
                         new Club()
@@ -54,8 +54,8 @@ namespace RunGroopWebApp.Data
                             Address = new Address()
                             {
                                 Street = "123 Main St",
-                                City = "Charlotte",
-                                State = "NC"
+                                City = "Izmir",
+                                State = "Izmir"
                             }
                         },
                         new Club()
@@ -88,8 +88,8 @@ namespace RunGroopWebApp.Data
                             Address = new Address()
                             {
                                 Street = "123 Main St",
-                                City = "Charlotte",
-                                State = "NC"
+                                City = "Istanbul",
+                                State = "Istanbul"
                             }
                         },
                         new Race()
@@ -102,8 +102,8 @@ namespace RunGroopWebApp.Data
                             Address = new Address()
                             {
                                 Street = "123 Main St",
-                                City = "Charlotte",
-                                State = "NC"
+                                City = "Ankara",
+                                State = "Ankara"
                             }
                         }
                     });
@@ -126,42 +126,42 @@ namespace RunGroopWebApp.Data
 
                 // Users
                 var userManager = serviceScope.ServiceProvider.GetRequiredService<UserManager<AppUser>>();
-                string adminUserEmail = "teddysmithdeveloper@gmail.com";
+                string adminUserEmail = "cankahveci@mail.com";
 
                 var adminUser = await userManager.FindByEmailAsync(adminUserEmail);
                 if (adminUser == null)
                 {
                     var newAdminUser = new AppUser()
                     {
-                        UserName = "teddysmithdev",
+                        UserName = "CanKahveci",
                         Email = adminUserEmail,
                         EmailConfirmed = true,
                         Address = new Address()
                         {
                             Street = "123 Main St",
-                            City = "Charlotte",
-                            State = "NC"
+                            City = "Istanbul",
+                            State = "Istanbul"
                         }
                     };
                     await userManager.CreateAsync(newAdminUser, "Coding@1234?");
                     await userManager.AddToRoleAsync(newAdminUser, UserRoles.Admin);
                 }
 
-                string appUserEmail = "user@etickets.com";
+                string appUserEmail = "barispideci@mail.com";
 
                 var appUser = await userManager.FindByEmailAsync(appUserEmail);
                 if (appUser == null)
                 {
                     var newAppUser = new AppUser()
                     {
-                        UserName = "app-user",
+                        UserName = "BarisPideci",
                         Email = appUserEmail,
                         EmailConfirmed = true,
                         Address = new Address()
                         {
                             Street = "123 Main St",
-                            City = "Charlotte",
-                            State = "NC"
+                            City = "Ankara",
+                            State = "Ankara"
                         }
                     };
                     await userManager.CreateAsync(newAppUser, "Coding@1234?");
